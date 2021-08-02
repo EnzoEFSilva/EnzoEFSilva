@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="shortcut icon" href="favicon1.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgba(20, 31, 32, 0.158);
+        }
+
+        form {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color: rgb(61, 142, 153);
+            width: 100%;
+            max-width: 500px;
+            margin: 32px auto;
+            padding: 10px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+        }
+
+        img {
+            width: 100px;
+            border-radius: 1em;
+            border-color: rgb(136, 62, 62);
+            border: 1px solid red;
+            margin-left: 380px;
+        }
+
+        button {
+            width: 20%;
+            height: 20px;
+            cursor: pointer;
+            background: rgb(2, 2, 2);
+            color: white
+        }
+    </style>
+</head>
+
+<body>
+
+    <form method="POST"">
+        <fieldset id=" usuario">
+        <legend style="text-align: center; font-size: 20px; background-color: rgb(240, 243, 245);">Cadastro do
+            Paciente</legend>
+        <img src="https://i.ibb.co/yf5GTtK/clinica.png" alt="clinica" alt="logo">
+
+        <div class="nome">
+            <p><label for="cNome">Nome: </label> <br>
+                <input type="text" name="tnome" id="cNome" size="20" maxlength="30" placeholder="Nome completo">
+            </p> <br>
+        </div>
+        
+            <p> <label for="cNasc">Data de Nascimento: </label><br>
+                <input type="date">
+        
+                <div class="numrCpf">
+                    <label for="numrCpf" class="sr-only">CPF</label>
+                    <div class="col-sm-12">
+                        <input type="text" name="numrCpf" id="numrcpf" maxlength="14" class="form-control cpf erro" placeholder="CPF">
+        
+                    </div>
+                </div>
+            </div>
+
+            <fieldset id="sexo">
+                <legend>Sexo</legend>
+                <input type="radio" name="tSexo" id="cMasc"> <label for="cMasc">Masculino</label>
+                <br>
+                <input type="radio" name="tSexo" id="cFem"> <label for="cFem"> Feminino</label>
+            </fieldset>
+            <p>
+                <label for="cPeso"> Peso:</label><br>
+                <input type="text" name="tPeso" id="cPeso" placeholder="00,00 kg" />
+            </p>
+            <p><label for="cAltura">Altura:</label><br>
+                <input type="text" name="tAltura" id="cAltura" placeholder="0.00m" />
+            </p>
+            <p>UF</p>
+            <select name="Estado" id="estadoid" required>
+                <option selected disabled value=""></option>
+                <option>Acre(AC)</option>
+                <option>Alagoas(AL)</option>
+                <option>Amapá(AP)</option>
+                <option>Amazonas(AM)</option>
+                <option>Bahia(BA)</option>
+                <option>Ceará(CE)</option>
+                <option>Distrito Federal(DF)</option>
+                <option>Espírito Santo(ES)</option>
+                <option>Goiás(GO)</option>
+                <option>Maranhão(MA)</option>
+                <option>Mato Grosso(MT)</option>
+                <option>Mato Grosso do Sul(MS)</option>
+                <option>Minas Gerais(MG)</option>
+                <option>Pará(PA)</option>
+                <option>Paraíba(PB)</option>
+                <option>Paraná(PR)</option>
+                <option>Pernanbuco(PE)</option>
+                <option>Piauí(PI)</option>
+                <option>Rio de Janeiro(RJ)</option>
+                <option>Rio Grande do Norte(RN)</option>
+                <option>Rio Grande do Sul(RS)</option>
+                <option>Rondônia(RO)</option>
+                <option>Roraima(RR)</option>
+                <option>Santa Catarina(SC)</option>
+                <option>São Paulo(SP)</option>
+                <option>Sergipe(SE)</option>
+                <option>Tocantins(TO)</option>
+            </select>
+            </p>
+
+            <button class="button" type="submit" form="meu_form">Enviar</button>
+
+            <button class="button" type="reset" <form="meu_form">Cancelar</button>
+    </form>
+    </fieldset>
+
+    </form>
+</body>
+
+</html>
